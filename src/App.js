@@ -60,7 +60,7 @@ const  deleteNote = (id) => {
           <Header handleToggleDarkMode={setDarkMode} />
           <Search handleSearch={setSearchText} />
           <NotesList 
-          notes={notes.filter((note) => note.text.includes(searchtext))} 
+          notes={notes.filter((note) => note.text.toLowerCase().includes(searchtext))} 
           handleAdd={addNote}
           handleDelete={deleteNote}
           />
